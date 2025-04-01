@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* ----- Reset & Căn chỉnh chung ----- */
+* { margin: 0; padding: 0; box-sizing: border-box; overflow: hidden;} 
+body {
+  font-family: Arial, sans-serif; /* Chọn font chữ */
+  background-color: #2b2b2b; 
+  color: #fff; 
+  display: flex; /* Căn giữa theo flexbox */
+  justify-content: center; /* Căn giữa ngang */
+  align-items: center; /* Căn giữa dọc */
+  height: 100vh; /* Chiều cao bằng với màn hình */
+  margin: 0; 
+}
+
+/* ----- Hiệu ứng ----- */
+@keyframes expandHeight {
+  from { height: 5%; opacity: 0; min-height: 0px; }
+  to { height: 90%; opacity: 1; min-height: 400px; }
+}
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/*@keyframes flyEffect {
+  0% {
+    left: 50%;
+    bottom: 50%;
+  }
+  99% {
+    left: %;
+    bottom: 50%;
+  }
+}*/
+
+/* ----- Navbar ----- */
+.navbar {
+  background-color: #333; 
+  display: flex; 
+  justify-content: center; /* Căn giữa các phần tử con */
+  align-items: center; 
+  position: fixed; /* Cố định trên cùng */
+  top: 0; /* Đặt ở trên cùng */
+  width: 100%; /* Chiều rộng bằng toàn trang */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  z-index: 1000; /* Đảm bảo hiển thị trên các phần khác */
+  gap: 540px; /* Khoảng cách giữa các phần tử con */
+  animation: fadeEffect 1.5s ease-in-out;
+}
+.navbar .logo {
+  font-family: "Winky Sans", sans-serif; 
+  font-size: 3vw; 
+  font-weight: bold; 
+  text-decoration: none; /* Xóa gạch chân */
+  background: linear-gradient(90deg, yellow, green); /* Gradient màu chữ */
+  -webkit-background-clip: text; /* Áp dụng gradient vào chữ */
+  -webkit-text-fill-color: transparent; /* Làm chữ trong suốt */
+}
+.navbar .nav-links {
+  display: flex; 
+  gap: 2vw; 
+  list-style: none; 
+}
+.navbar .nav-links a {
+  text-decoration: none; 
+  color: white;
+  font-size: 1.2vw; 
+  transition: color 0.3s; /* Hiệu ứng đổi màu mượt mà */
+}
+.navbar .nav-links a:hover { color: #ffcc00; } /* Đổi màu khi hover */
+
+/* ----- Container ----- */
+.container {
+  width: 90%; 
+  height: 100%; 
+  min-height: 400px; /* Không nhỏ hơn 400px */
+  display: flex; 
+  flex-direction: column; /* Sắp xếp theo cột */
+  animation: expandHeight 0.8s ease-in-out; /* Áp dụng hiệu ứng mở rộng */
+}
+.editor-container {
+  flex-grow: 1; /* Lấp đầy không gian trống */
+  margin: 140px 0 10px 0; /* Căn lề trên & dưới */
+  border-radius: 22px; /* Bo tròn viền */
+  overflow: hidden; /* Ẩn nội dung bị tràn */
+  border: 2px solid #111; 
+  transition: 1s;
+}
+
+/* ----- Buttons ----- */
+.buttons-wrapper {
+  display: flex;
+  justify-content: space-between; /* Đẩy 2 phần tử về 2 phía */
+  align-items: center;
+  width: 100%; /* Chiều rộng full */
+  margin-bottom: 20px; /* Điều chỉnh khoảng cách với phần còn lại */
+  gap:5px;
+}
+#runButton {
+  width: 92%;
+  height: 150%; 
+  background-color: #4CAF50; 
+  color: white; 
+  font-size: 1.2vw; 
+  font-weight: bold; 
+  border: 2px solid black; /* Xóa viền */
+  border-radius: 5px; /* Bo góc */
+  cursor: pointer; /* Hiển thị ngón tay khi chạm vào nút */
+  animation: fadeEffect 1.5s ease-in-out; /* Áp dụng hiệu ứng hiện dần*/
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+
+}
+#runButton:hover { background-color: white; color: #22a024; } /* Đổi màu khi chạm */
+
+
+.theme-buttons {
+  display: flex;
+  width: 8%;
+  height: 120%;
+  background-color: #4CAF50;
+  border: 3px solid black;
+  border-radius: 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+#dark-mode {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  transition: 1s;
+
+}
+#light-mode {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  border: none;
+  background-color:#4CAF50;
+  transition: 1s;
+
+}
+
+/*Background*/
+.background {
+  transform: rotate(90deg);
+  z-index: -1000;
+  position: absolute;
+  height: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
