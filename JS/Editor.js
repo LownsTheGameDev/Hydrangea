@@ -16,6 +16,7 @@ require(['vs/editor/editor.main'], function() {
     theme: 'vs-dark',
     automaticLayout: true,
   });
+  editor.focus();
 
   // Chạy mã HTML khi nhấn nút
   document.getElementById('runButton').addEventListener('click', function() {
@@ -29,11 +30,6 @@ require(['vs/editor/editor.main'], function() {
 // // Đổi theme
 var darkButton = document.getElementById('dark-mode')
 var lightButton = document.getElementById('light-mode')
-// var Editor = document.getElementByClass('editor-container')
-// function darkMode() {
-//   Editor.theme = "vs-light"
-
-// }
 
 document.getElementById('light-mode').addEventListener('click', function() {
     monaco.editor.setTheme('vs-light');
