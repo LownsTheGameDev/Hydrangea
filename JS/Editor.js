@@ -37,14 +37,14 @@ var lightButton = document.getElementById('light-mode')
 
 document.getElementById('light-mode').addEventListener('click', function() {
     monaco.editor.setTheme('vs-light');
-    lightButton.style.backgroundColor = '#DDDDDD';
-    darkButton.style.backgroundColor = '#4CAF50';
+    lightButton.style.backgroundColor = '#b593f5';
+    darkButton.style.backgroundColor = '#272e3d';
 
 });
 
 document.getElementById('dark-mode').addEventListener('click', function() {
     monaco.editor.setTheme('vs-dark');
-    darkButton.style.backgroundColor = '#DDDDDD';
-    lightButton.style.backgroundColor = '#4CAF50';
+    darkButton.style.backgroundColor = '#b593f5';
+    lightButton.style.backgroundColor = '#272e3d';
 
 });

@@ -24,16 +24,6 @@ body {
   to { opacity: 1; }
 }
 
-/*@keyframes flyEffect {
-  0% {
-    left: 50%;
-    bottom: 50%;
-  }
-  99% {
-    left: %;
-    bottom: 50%;
-  }
-}*/
 
 /* ----- Navbar ----- */
 .navbar {
@@ -54,7 +44,7 @@ body {
   font-size: 3vw; 
   font-weight: bold; 
   text-decoration: none; /* Xóa gạch chân */
-  background: linear-gradient(90deg, yellow, green); /* Gradient màu chữ */
+  background: linear-gradient(90deg, #ff94b2, #7d77ff); /* Gradient màu chữ */
   -webkit-background-clip: text; /* Áp dụng gradient vào chữ */
   -webkit-text-fill-color: transparent; /* Làm chữ trong suốt */
 }
@@ -69,7 +59,7 @@ body {
   font-size: 1.2vw; 
   transition: color 0.3s; /* Hiệu ứng đổi màu mượt mà */
 }
-.navbar .nav-links a:hover { color: #ffcc00; } /* Đổi màu khi hover */
+.navbar .nav-links a:hover { color: #876fd1; } /* Đổi màu khi hover */
 
 /* ----- Container ----- */
 .container {
@@ -101,7 +91,7 @@ body {
 #runButton {
   width: 92%;
   height: 150%; 
-  background-color: #4CAF50; 
+  background-color: #876fd1; 
   color: white; 
   font-size: 1.2vw; 
   font-weight: bold; 
@@ -112,14 +102,14 @@ body {
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 
 }
-#runButton:hover { background-color: white; color: #22a024; } /* Đổi màu khi chạm */
+#runButton:hover { background-color: white; color: #876fd1; } /* Đổi màu khi chạm */
 
 
 .theme-buttons {
   display: flex;
   width: 8%;
   height: 120%;
-  background-color: #4CAF50;
+  background-color: #272e3d;
   border: 3px solid black;
   border-radius: 25px;
   justify-content: space-between;
@@ -133,6 +123,7 @@ body {
   border: none;
   border-radius: 25px;
   transition: 1s;
+  background-color: #b593f5;
 
 }
 #light-mode {
@@ -142,7 +133,7 @@ body {
   justify-content: center;
   border-radius: 25px;
   border: none;
-  background-color:#4CAF50;
+  background-color:#272e3d;
   transition: 1s;
 
 }

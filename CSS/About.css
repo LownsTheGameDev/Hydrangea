@@ -24,17 +24,6 @@ body {
   to { opacity: 1; }
 }
 
-/*@keyframes flyEffect {
-  0% {
-    left: 50%;
-    bottom: 50%;
-  }
-  99% {
-    left: %;
-    bottom: 50%;
-  }
-}*/
-
 /* ----- Navbar ----- */
 .navbar {
   background-color: #333; 
@@ -54,7 +43,7 @@ body {
   font-size: 3vw; 
   font-weight: bold; 
   text-decoration: none; /* Xóa gạch chân */
-  background: linear-gradient(90deg, yellow, green); /* Gradient màu chữ */
+  background: linear-gradient(90deg, #ff94b2, #7d77ff); /* Gradient màu chữ */
   -webkit-background-clip: text; /* Áp dụng gradient vào chữ */
   -webkit-text-fill-color: transparent; /* Làm chữ trong suốt */
 }
@@ -69,7 +58,7 @@ body {
   font-size: 1.2vw; 
   transition: color 0.3s; /* Hiệu ứng đổi màu mượt mà */
 }
-.navbar .nav-links a:hover { color: #ffcc00; } /* Đổi màu khi hover */
+.navbar .nav-links a:hover { color: #876fd1; } /* Đổi màu khi hover */
 
 /*Background*/
 .background {
@@ -81,4 +70,63 @@ body {
   margin: 0;
   padding: 0;
   object-fit: cover;
+}
+/*Decors*/
+.decors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decors .circle{ 
+  width: 5vw;
+  height: 5vw;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  position: absolute;
+}
+.decors .cloud {
+  position: absolute;
+  filter: invert(1) brightness(100);
+}
+
+.decors h1 {
+  text-align: center;
+  font-size: 5vw;
+}
+
+.decors .tooltip {
+  font-size:2vw;
+  position: absolute;
+  top: 60%;
+  opacity: 0;
+  visibility: hidden;
+  color:white;
+  font-style:bold;
+  width: 30%;
+}
+
+.decors #circle1:hover ~ #circleA {
+  opacity: 1;
+  visibility: visible;
+}
+.decors #circle2:hover ~ #circleB {
+  opacity: 1;
+  visibility: visible;
+}
+.decors #circle3:hover ~ #circleC {
+  opacity: 1;
+  visibility: visible;
+}
+.decors #circle4:hover ~ #circleD {
+  opacity: 1;
+  visibility: visible;
+}
+.decors #circle5:hover ~ #circleE {
+  opacity: 1;
+  visibility: visible;
+}
+.decors #circle6:hover ~ #circleF {
+  opacity: 1;
+  visibility: visible;
 }
